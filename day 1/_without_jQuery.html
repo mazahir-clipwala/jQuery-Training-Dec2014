@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <title>Day 1</title>
+    <style>
+        body {
+            font-family: Calibri;
+            font-size: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><label name="myfirstName">First Name: </label></td>
+            <td><input type="text" id="fname"/></td>
+        </tr>
+        <tr>
+            <td><label>Last Name: </label></td>
+            <td><input type="text" id="lname"/></td>
+        </tr>
+        <tr>
+            <td><label>Full Name: </label></td>
+            <td><input type="text" id="fullname"/></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button id="submit" type="submit">Show me the full name</button></td>
+        </tr>
+    </table>
+    
+    <script type="text/javascript">
+        document.getElementById ("submit").addEventListener ("click", function () {
+            document.getElementById ("fullname").value = document.getElementById("fname").value + " " + document.getElementById ("lname").value;
+        });
+        
+    </script>
+</body>
+</html>
