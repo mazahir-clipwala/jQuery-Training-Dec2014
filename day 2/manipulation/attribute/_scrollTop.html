@@ -1,0 +1,75 @@
+<!-- the html is to demonstrate "scrollTop" function. @author - Mazahir Clipwala. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../../css/style.css"/>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript">
+			
+			$(function () {
+				$.each ($('.records'), function (index, obj) {
+					$(obj).html(index);
+					if (index == 20) {
+						$(obj).attr('id', index);
+					}
+				});
+				
+				$('button').on('click', function () {
+					hiddenEle = document.getElementById("20").offsetTop;
+					$('#inner').scrollTop(hiddenEle);
+				});
+			});
+		</script>
+		<style type="text/css">
+			.records {
+				margin: 2px;
+				display: block;
+				width: auto;
+				height: 25px;
+			}
+		</style>
+		<title>_scrollTop</title>
+	</head>
+	<body>
+		<button>Set scroll top for element # 20</button><br/>
+		<div id="inner" style="overflow: scroll; height: 500px; width: 900px;">
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+		</div>
+		
+	</body>
+</html>

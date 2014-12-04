@@ -1,0 +1,40 @@
+<!-- the html is to demonstrate "contains". @author - Mazahir Clipwala.-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../../css/style.css"/>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				/****************************************************************************
+					'*' - contains
+				****************************************************************************/
+				
+				console.log ($('input[value*="James"]'));
+			});
+		</script>
+
+		<title>_contains</title>
+		</head>
+	<body>
+		<table>
+			<tr>
+				<td>First Name</td>
+				<td><input type="text" class="fname" id="fname" value="Harry" /></td>
+			<tr>
+			<tr>
+				<td>Middle Name</td>
+				<td><input type="text" class="mname" id="mname" value="James" /></td>
+			<tr>
+			<tr>
+				<td>Last Name</td>
+				<td><input type="text" class="lname" id="lname" value="Potter" /></td>
+			<tr>
+			<tr>
+				<td>Full Name</td>
+				<td><input type="text" class="fullName" value="Harry James Potter" /></td>
+			<tr>
+			
+		</table>
+	</body>
+</html>

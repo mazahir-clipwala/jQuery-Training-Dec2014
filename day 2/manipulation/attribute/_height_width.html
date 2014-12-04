@@ -1,0 +1,39 @@
+<!-- the html is to demonstrate "height and width" function. @author - Mazahir Clipwala. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../../css/style.css"/>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript">
+			
+			$(function () {
+				$('#setWidth').on('click', function () {
+					$('div').width (100);
+				});
+				
+
+				$('#getWidth').on('click', function () {
+					console.log ("Current Width is = " + $('div').width ());
+				});
+				
+
+				$('#setHeight').on('click', function () {
+					$('div').height (200);
+				});
+
+				$('#getHeight').on('click', function () {
+					console.log ("Current Height is = " + $('div').height ());
+				});
+			});
+		</script>
+		<title>_height_width</title>
+	</head>
+	<body>
+		<div style="display:block;">First</div>
+		
+		<button id="setWidth">Set Width 100</button>
+		<button id="getWidth">Get Width</button><br/><br/>
+		<button id="setHeight">Set Height 200</button>
+		<button id="getHeight">Get Height</button>
+	</body>
+</html>

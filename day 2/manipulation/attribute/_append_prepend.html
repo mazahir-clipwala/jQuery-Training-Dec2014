@@ -1,0 +1,27 @@
+<!-- the html is to demonstrate "append and prepend" function. @author - Mazahir Clipwala. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../../css/style.css"/>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript">
+			
+			$(function () {
+				$('button:first').on('click', function () {
+					$('#target').append('<p>Goes inside #target, at end</p>');
+				});
+				
+				$('button:last').on('click', function () {
+					$('#target').prepend('<p>Goes inside #target, at begining</p>');
+				});
+			});
+		</script>
+		<title>_append_prepend</title>
+	</head>
+	<body>
+		<button>Append</button><br/>
+		<button>Prepend</button><br/>
+		<div id="target"></div>
+		
+	</body>
+</html>

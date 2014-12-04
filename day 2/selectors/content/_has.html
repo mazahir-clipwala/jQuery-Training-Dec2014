@@ -1,0 +1,56 @@
+<!-- the html is to demonstrate ":has" selector. @author - Mazahir Clipwala.-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../../css/style.css"/>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<script type="text/javascript">
+
+			$(function () {
+				/****************************************************************************
+				':has' - selects elements which contain at least one element that matches
+				the specified selector.
+				****************************************************************************/
+				
+			});
+		</script>
+		<title>_has</title>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td>First Name</td>
+				<td><input type="text" class="fname" id="fname" value="Harry" /></td>
+			<tr>
+			<tr>
+				<td>Middle Name</td>
+				<td><input type="text" class="mname" id="mname" value="James" /></td>
+			<tr>
+			<tr>
+				<td>Last Name</td>
+				<td><input type="text" class="lname" id="lname" value="Potter" /></td>
+			<tr>
+			<tr>
+				<td>Full Name</td>
+				<td><input type="text" class="fullName" value="Harry James Potter" /></td>
+			<tr>
+			<tr>
+				<td>Education</td>
+				<td>
+					<input type="checkbox" class="ed1"/>Under-Graduate
+					<input type="checkbox" checked="checked" class="ed" />Graduate
+					<input type="checkbox" checked="checked" class="ed1"/>Masters
+				</td>
+			<tr>
+
+			<tr>
+				<td>Sex</td>
+				<td>
+					<input type="radio" checked="checked" name="sex"/>Male
+					<input type="radio" name="sex"/>Female
+				</td>
+			<tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- the html is to demonstrate "outer and inner width" function. @author - Mazahir Clipwala. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../../css/style.css"/>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript">
+			
+			$(function () {
+				$('#getOuterWidth').on('click', function () {
+					console.log ("Outer Width = " + $('#first').outerWidth ());
+				});
+				
+
+				$('#getInnerWidth').on('click', function () {
+					console.log ("Inner Width = " + $('#first').innerWidth ());
+				});
+			});
+		</script>
+		<title>_offset_position</title>
+		
+		<style>
+			#container {
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="first">First</div>
+		
+		
+				
+		<button id="getOuterWidth">Get outer width</button>
+		<button id="getInnerWidth">Get inner width</button>
+	</body>
+</html>

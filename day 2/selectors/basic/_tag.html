@@ -1,0 +1,37 @@
+<!-- the html is to show how element(s) with a "tag" can be selected. @author - Mazahir Clipwala.-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../../css/style.css"/>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<script type="text/javascript">
+			$(function () {
+				/****************************************************************************
+					'<<tag name>>' gets the element with that tag name
+					similar to document.getElementsByTagName
+				****************************************************************************/
+				
+				console.log ($('label'));
+			});
+
+		</script>
+		<title>_tag</title>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td><label>First Name</label></td>
+				<td><input type="text" class="fname names" id="fname" value="Harry" /></td>
+			<tr>
+			<tr>
+				<td><label>Middle Name</label></td>
+				<td><input type="text" class="mname names" id="mname" value="James" /></td>
+			<tr>
+			<tr>
+				<td><label>Last Name</label></td>
+				<td><input type="text" class="lname names" id="lname" value="Potter" /></td>
+			<tr>
+		</table>
+	</body>
+</html>

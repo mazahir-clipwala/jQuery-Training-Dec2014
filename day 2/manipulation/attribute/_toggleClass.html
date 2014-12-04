@@ -1,0 +1,35 @@
+<!-- the html is to demonstrate "toggleClass" function. @author - Mazahir Clipwala. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../../css/style.css"/>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript">
+			
+			$(function () {
+				$('button').on('click', function () {
+					$('div').toggleClass ('demo');
+				});
+			});
+		</script>
+		
+		<style>
+			.demo {
+				background-color: green;
+				width: 400px;
+				height: 100px;
+				border: 1px solid black;
+				display:  inline-block;
+				margin: 10px;
+			}
+			
+		</style>
+		<title>_toggleClass</title>
+	</head>
+	<body>
+		<div>First</div>
+		<div class="demo">Second</div>
+		
+		<button>Click Me!</button>
+	</body>
+</html>

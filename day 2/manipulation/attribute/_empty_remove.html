@@ -1,0 +1,49 @@
+<!-- the html is to demonstrate "empty and remove" function. @author - Mazahir Clipwala. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../../css/style.css"/>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript">
+			
+			$(function () {
+				$.each ($('.records'), function (index, obj) {
+					$(obj).html(index);
+					$(obj).attr('id', index);
+				});
+				$('button:first').on('click', function () {
+					$('#target').empty();
+				});
+				
+				$('button:last').on('click', function () {
+					$('#5').remove(); 
+				});
+			});
+		</script>
+		<style type="text/css">
+			.records {
+				margin: 2px;
+				display: block;
+				width: auto;
+				height: 25px;
+			}
+		</style>
+		<title>_empty_remove</title>
+	</head>
+	<body>
+		<button>Empty</button><br/>
+		<button>Remove</button><br/>
+		<div id="target" style="height: 260px; width: 900px;">
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+			<div class="records">1</div>
+		</div>
+		
+	</body>
+</html>

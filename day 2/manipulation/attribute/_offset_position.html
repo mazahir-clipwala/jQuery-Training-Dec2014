@@ -1,0 +1,39 @@
+<!-- the html is to demonstrate "offset" function. @author - Mazahir Clipwala. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../../css/style.css"/>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript">
+			
+			$(function () {
+				$('#setOffset').on('click', function () {
+					$('#first').offset ({
+						top: 10,
+						left: 100
+					});
+				});
+				
+
+				$('#getOffset').on('click', function () {
+					console.log ("Current offset is:" );
+					console.log ($('#first').offset ());
+				});
+				
+
+				$('#getPosition').on('click', function () {
+					console.log ("Current position is:" );
+					console.log ($('#first').position ());
+				});
+			});
+		</script>
+		<title>_offset_position</title>
+	</head>
+	<body>
+		<div style="display:block;" id="first">First</div>
+		
+		<button id="setOffset">Set offset</button>
+		<button id="getOffset">Get offset</button><br/><br/>
+		<button id="getPosition">Get position</button>
+	</body>
+</html>

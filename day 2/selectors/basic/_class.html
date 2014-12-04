@@ -1,0 +1,37 @@
+<!-- the html is to show how an element with a "class" can be selected. @author - Mazahir Clipwala.-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../../css/style.css"/>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<script type="text/javascript">
+			$(function () {
+				/****************************************************************************
+					'.' preceded by the class name, gets the object of that element
+					similar to document.getElementsByClassName
+				****************************************************************************/
+				console.log ($('.names'));
+			});
+
+		</script>
+
+		<title>_class</title>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td><label>First Name</label></td>
+				<td><input type="text" class="fname names" id="fname" value="Harry" /></td>
+			<tr>
+			<tr>
+				<td><label>Middle Name</label></td>
+				<td><input type="text" class="mname names" id="mname" value="James" /></td>
+			<tr>
+			<tr>
+				<td><label>Last Name</label></td>
+				<td><input type="text" class="lname names" id="lname" value="Potter" /></td>
+			<tr>
+		</table>
+	</body>
+</html>

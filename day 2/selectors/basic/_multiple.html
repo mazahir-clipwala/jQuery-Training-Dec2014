@@ -1,0 +1,34 @@
+<!-- the html is to show how to select multiple elements. @author - Mazahir Clipwala.-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../../css/style.css"/>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<script type="text/javascript">
+			$(function () {
+				console.log ($('#fname, #lname, h1'));
+			});
+
+		</script>
+
+		<title>_multiple</title>
+	</head>
+	<body>
+		<h1>This is the Muliple selector HTML</h1>
+		<table>
+			<tr>
+				<td><label>First Name</label></td>
+				<td><input type="text" class="fname names" id="fname" value="Harry" /></td>
+			<tr>
+			<tr>
+				<td><label>Middle Name</label></td>
+				<td><input type="text" class="mname names" id="mname" value="James" /></td>
+			<tr>
+			<tr>
+				<td><label>Last Name</label></td>
+				<td><input type="text" class="lname names" id="lname" value="Potter" /></td>
+			<tr>
+		</table>
+	</body>
+</html>

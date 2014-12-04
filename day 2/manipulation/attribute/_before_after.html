@@ -1,0 +1,27 @@
+<!-- the html is to demonstrate "before and after" function. @author - Mazahir Clipwala. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../../css/style.css"/>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript">
+			
+			$(function () {
+				$('button:first').on('click', function () {
+					$('#target').before('<p>Inserted before #target</p>');
+				});
+				
+				$('button:last').on('click', function () {
+					$('#target').after('<p>Inserted after #target</p>');
+				});
+			});
+		</script>
+		<title>_before_after</title>
+	</head>
+	<body>
+		<button>Add Before</button><br/>
+		<button>Add After</button><br/>
+		<div id="target"></div>
+		
+	</body>
+</html>

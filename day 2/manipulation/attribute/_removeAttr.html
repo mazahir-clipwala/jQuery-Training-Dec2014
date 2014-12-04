@@ -1,0 +1,41 @@
+<!-- the html is to demonstrate "removeAttr" function. @author - Mazahir Clipwala. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../../css/style.css"/>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				$('button').on('click', function () {
+					console.log ("Before removeAttr call = " + $('.demo-second').attr('id'));
+					
+					$('.demo-second').removeAttr('id');
+					
+					console.log ("After removeAttr call = " + $('.demo-second').attr('id'));
+				});
+				
+			});
+		</script>
+		<style>
+			#first {
+				background-color: green; 
+				color: white;
+			}
+			#second {
+				background-color: red;
+				color: white;
+			}
+			
+		</style>
+		<title>_removeAttr</title>
+	</head>
+	<body>
+		<div class="demo-first" id="first">First</div>
+		
+		<div class="demo-second" id="second">Second</div>
+		
+		<br/>
+		
+		<button>Remove Attr</button>
+	</body>
+</html>

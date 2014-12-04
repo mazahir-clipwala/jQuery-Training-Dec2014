@@ -1,0 +1,41 @@
+<!-- the html is to demonstrate "removeClass" function. @author - Mazahir Clipwala. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../../css/style.css"/>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				$('button').on('click', function () {
+					console.log ("Before removeClass call = " + $('#first').attr('class'));
+					
+					$('#first').removeClass('demo-first');
+					
+					console.log ("After removeClass call = " + $('#first').attr('class'));
+				});
+				
+			});
+		</script>
+		<style>
+			.demo-first {
+				background-color: green; 
+				color: white;
+			}
+			.demo-second {
+				background-color: red;
+				color: white;
+			}
+			
+		</style>
+		<title>_removeClass</title>
+	</head>
+	<body>
+		<div class="demo-first" id="first">First</div>
+		
+		<div class="demo-second" id="second">Second</div>
+		
+		<br/>
+		
+		<button>Remove Class</button>
+	</body>
+</html>

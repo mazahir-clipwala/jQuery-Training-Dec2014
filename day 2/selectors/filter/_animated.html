@@ -1,0 +1,37 @@
+<!-- the html is to demonstrate ":last" filter selector. @author - Mazahir Clipwala.-->
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../../css/style.css"/>
+		<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+		<style>
+			div {
+				background: yellow;
+				border: 1px solid #AAA;
+				width: 80px;
+				height: 80px;
+				margin: 0 5px;
+				float: left;
+			}
+			div.colored {
+				background: green;
+			}
+		</style>
+		<title>animated demo</title>
+	</head>
+	<body>
+		<button id="run">Run</button>
+		<div></div>
+		<div id="mover"></div>
+		<div></div>
+		<script>
+			$("#run").click(function() {
+				$( "div:animated" ).toggleClass ("colored");
+			});
+			function animateIt() {
+				$("#mover").slideToggle ("slow", animateIt );
+			}
+			animateIt();
+		</script>
+	</body>
+</html>
