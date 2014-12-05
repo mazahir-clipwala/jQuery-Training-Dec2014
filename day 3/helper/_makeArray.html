@@ -1,0 +1,28 @@
+<!-- the html is to demonstrate "on" event handler. @author - Mazahir Clipwala. -->
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>jQuery.makeArray demo</title>
+		<style>
+			div {
+				color: red;
+			}
+		</style>
+			<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+	</head>
+	<body>
+		<div>First</div>
+		<div>Second</div>
+		<div>Third</div>
+		<div>Fourth</div>
+		<script>
+			// Returns a NodeList
+			var elems = document.getElementsByTagName( "div" );
+			// Convert the NodeList to an Array
+			var arr = jQuery.makeArray( elems );
+			// Use an Array method on list of dom elements
+			arr.reverse();
+			$( arr ).appendTo( document.body );
+		</script>
+	</body>
+</html>

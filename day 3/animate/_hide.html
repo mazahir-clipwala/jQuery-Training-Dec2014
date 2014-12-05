@@ -1,0 +1,26 @@
+<!-- the html is to demonstrate "on" event handler. @author - Mazahir Clipwala. -->
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>event.preventDefault demo</title>
+		<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+		<script>
+			$(function () {
+				$("p").hide (5000, function(){
+					alert("The paragraph is now hidden");
+				});
+
+			});
+		</script>
+		<style>
+			p {
+				width: 100px;
+				height: 100px;
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<p></p>
+		
+</body>

@@ -1,0 +1,21 @@
+<!-- the html is to demonstrate "on" event handler. @author - Mazahir Clipwala. -->
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>event.preventDefault demo</title>
+		<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+		<script>
+			$(function () {
+				$( "a" ).click(function( event ) {
+					event.preventDefault();
+					console.log(event.isDefaultPrevented());
+					$( "<div>" ).append( "default " + event.type + " prevented" ).appendTo( "#log" );
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<a href="http://jquery.com">default click action is prevented</a>
+		<div></div>
+		
+</body>

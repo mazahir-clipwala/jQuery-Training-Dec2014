@@ -1,0 +1,49 @@
+<!-- the html is to demonstrate "on" event handler. @author - Mazahir Clipwala. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../css/style.css"/>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript">
+			
+			function customDataPassedToDiv(event) {
+				console.log(event);
+				//alert ("fname = " + event.data.fname + ", lname = " + event.data.lname + event.data.mname);
+			}
+			
+			$(function () {
+				// display an alert when it is clicked:
+				/*$('div').on('click', function () {
+					alert ("I am clicked")
+				});*/
+				
+				// pass data to the event handler
+				$('div').on('click', {fname: "Harry", lname: "Potter", mname: "James"}, customDataPassedToDiv);
+				
+				//attach multiple event handlers simultaneously using a plain object.
+				
+				/*$('div').on ({
+					click: function () {
+						alert ("I am clicked.");	
+					},
+					mouseenter: function () {
+						alert ("You entered my domain");
+					},
+					mouseleave: function () {
+						alert ("You are leaving my domain");
+					}
+				});*/
+				
+				$('button').on('click', function () {
+					$('div').off('mouseenter');
+				});
+				
+			});
+		</script>
+		<title>_on</title>
+	</head>
+	<body>
+		<div id="target"></div>
+		<button>Off</button>
+	</body>
+</html>
