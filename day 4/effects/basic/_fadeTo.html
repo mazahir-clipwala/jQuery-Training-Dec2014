@@ -1,0 +1,56 @@
+<!-- the html is to demonstrate "fade to". @author - Mazahir Clipwala. -->
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../css/style.css"/>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script>
+			$(function () {
+				// Fade To
+				$('button:first').on ('click', function () {
+					$("p").fadeTo (1000, 0.33);
+				});
+
+				// Unfade
+				$('button:eq(1)').on ('click', function () {
+					$("p").fadeTo (1000, 1);
+				});
+
+				// Fade To Toggle
+				$('button:last').on ('click', function () {
+
+					var op = $("p").css ('opacity');
+					if (0.33 === parseFloat (op)) {
+						$("p").fadeTo (1000, 1);
+					}
+					else {
+						$("p").fadeTo (2000, 0.33);
+					}
+
+
+				});
+			});
+		</script>
+		<style>
+			p {
+				width: 100px;
+				height: 100px;
+				border: 1px solid black;
+			}
+			img {
+				width: inherit;
+				height: inherit;
+			}
+		</style>
+		<title>_fadeTo</title>
+	</head>
+
+	<body>
+		<button>Fade To</button>
+		<button>Unfade</button>
+		<button>Toggle Fade To</button>
+		<p>
+			<img src="1.png" />
+		</p>
+	</body>
+</html>

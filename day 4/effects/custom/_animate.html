@@ -1,0 +1,49 @@
+<!-- the html is to demonstrate "animate". @author - Mazahir Clipwala. -->
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../css/style.css"/>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script>
+			$.fx.off = false;
+			$(function () {
+				// animate
+				$('button').on('click', function () {
+					//simple animate function call
+					/*$('p').animate({
+							width: "90%",
+							opacity: 0.5,
+							borderWidth: 2
+						}, 1000);*/
+					
+					//chaining of the animate function
+					
+					/*$('p').animate({width: "90%"}, 2000)
+						.animate ({opacity: 0.2}, 2000)
+						.animate ({borderWidth: 5}, 2000)
+						.animate ({backgroundColor: "red"}, 2000);*/
+					
+					$('p').animate ({width: '90%'}, {queue: false, duration: 1000})
+						.animate ({borderWidth: '5px'})
+					
+					
+				});
+
+			});
+		</script>
+		<style>
+			p {
+				width: 100px;
+				height: 100px;
+				border: 1px solid black;
+				position: relative;
+			}
+		</style>
+		<title>_animate</title>
+	</head>
+
+	<body>
+		<button>Animate</button>
+		<p>I am big</p>
+	</body>
+</html>

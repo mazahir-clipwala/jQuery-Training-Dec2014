@@ -1,0 +1,65 @@
+<!-- the html is to demonstrate "animate with UI". @author - Mazahir Clipwala. -->
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../../css/style.css">
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+		<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+		<style>
+		button {
+			padding: .5em 1em;
+			text-decoration: none;
+		}
+		#effects {
+			position: relative;
+			width: 240px;
+			height: 135px;
+			padding: 0.4em;
+		}
+		</style>
+		<script>
+			$(function() {
+				// Bounce effect
+				$('button:contains("Bounce")').on('click', function () {
+					$("#effects").toggle ("bounce", 500 );
+				});
+				
+				// Explode effect
+				$('button:contains("Explode")').on('click', function () {
+					$("#effects").toggle ("explode", 2000 );
+				});
+				
+				// Highlight effect
+				$('button:contains("Highlight")').on('click', function () {
+					$("#effects").toggle ("highlight", 2000 );
+				});
+				
+				// Pulsate effect
+				$('button:contains("Pulsate")').on('click', function () {
+					$("#effects").toggle ("pulsate", 2000 );
+				});
+				
+				// Shake effect
+				$('button:contains("Shake")').on('click', function () {
+					$("#effects").toggle ("shake", 2000 );
+				});
+			});
+		</script>
+		
+		<title>_toggle_ui</title>
+	</head>
+	<body>
+		<button>Bounce</button>
+		<button>Explode</button>
+		<button>Highlight</button>
+		<button>Pulsate</button>
+		<button>Shake</button>
+		
+		<br/>
+		
+		<div id="effects" style="text-align: center">
+			This is a box
+		</div>
+	</body>
+</html>

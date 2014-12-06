@@ -1,0 +1,50 @@
+<!-- the html is to demonstrate "show, hide and toggle". @author - Mazahir Clipwala. -->
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../css/style.css"/>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script>
+			$(function () {
+				// Show
+				$('button:contains("Show")').on ('click', function () {
+					$("p").show (2000, function () {
+						console.log ('Done showing the element');
+					});
+				});
+
+				// Hide
+				$('button:contains("Hide")').on ('click', function () {
+					$("p").hide (1000);
+				});
+
+				// Toggle
+				$('button:contains("Toggle")').on ('click', function () {
+					$("p").toggle (1000);
+				});
+
+			});
+		</script>
+		<style>
+			p {
+				width: 100px;
+				height: 100px;
+				border: 1px solid black;
+			}
+			img {
+				width: inherit;
+				height: inherit;
+			}
+		</style>
+		<title>_show_hide_toggle</title>
+	</head>
+
+	<body>
+		<button>Show</button>
+		<button>Hide</button>
+		<button>Toggle</button>
+		<p>
+			<img src="1.png" />
+		</p>
+	</body>
+</html>

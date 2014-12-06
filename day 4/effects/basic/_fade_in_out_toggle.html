@@ -1,0 +1,47 @@
+<!-- the html is to demonstrate "fade in, fade out and fade toggle". @author - Mazahir Clipwala. -->
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../css/style.css"/>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script>
+			$(function () {
+				// Fade In
+				$('button:first').on ('click', function () {
+					$("p").fadeIn (2000);
+				});
+
+				// Fade Out
+				$('button:eq(1)').on ('click', function () {
+					$("p").fadeOut (2000);
+				});
+
+				// Fade Toggle
+				$('button:last').on ('click', function () {
+					$("p").fadeToggle (2000);
+				});
+			});
+		</script>
+		<style>
+			p {
+				width: 100px;
+				height: 100px;
+				border: 1px solid black;
+			}
+			img {
+				width: inherit;
+				height: inherit;
+			}
+		</style>
+		<title>_fade_in_out_toggle</title>
+	</head>
+
+	<body>
+		<button>Fade In</button>
+		<button>Fade Out</button>
+		<button>Fade Toggle</button>
+		<p>
+			<img src="1.png" />
+		</p>
+	</body>
+</html>
