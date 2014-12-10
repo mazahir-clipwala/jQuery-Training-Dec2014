@@ -24,15 +24,23 @@
 			});
 
 			$('#refresh').on ('click', function () {
-				$.get ("/OrderMgmt/orders", function (response, status, xHR) {
-					var xmlObj = $.parseXML (response);
-					var orders = $(xmlObj).find ("order");
-					$('#orders').empty();
-					$.each (orders, function (index, obj1) {
-						$('#orders').append ('<span class="success">' + $(obj1).find ("name").text () + " ordered " + $(obj1).find ("item").text () + '</span>');
-					});
-				});
+				var dataType = $('input:checked').attr('id');
 
+				if (dataType === 'xml') {
+					$.get ("/OrderMgmt/orders", function (response, status, xHR) {
+						var xmlObj = $.parseXML (response);
+						var orders = $(xmlObj).find ("order");
+						$('#orders').empty();
+						$.each (orders, function (index, obj1) {
+							$('#orders').append ('<span class="success">' + $(obj1).find ("name").text () + " ordered " + $(obj1).find ("item").text () + '</span>');
+						});
+					});
+				}
+				else {
+					$.getJSON ('/OrderMgmt/orders/json', function (data) {
+						console.log (data.orders[0]);
+					});
+				}
 			});
 
 			$('#orders').load ("/OrderMgmt/orders", function (response, status, xHR) {
@@ -85,6 +93,13 @@
 			<tr>
 				<td>Item: </td>
 				<td><input type="text" name="item" /></td>
+			</tr>
+			
+			<tr>
+				<td colspan="2">
+					<input type="radio" id="xml" name="dataType" checked="checked"/><label>Xml</label>
+					<input type="radio" id="json" name="dataType" /><label>JSON</label>
+				</td>
 			</tr>
 			
 			<tr>
