@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>jQuery for Java Web Developers</title>
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="setReadOnly.js"></script>
+        <script type="text/javascript"> 
+            $(function () { 
+                $('button:first').on ('click', function () {
+                    $('input').setReadOnly ({
+                                                switched: 'on',
+                                                before: function () {
+                                                    console.log ('BEFORE the plugin executed');
+                                                },
+                                                after: function () {
+                                                    console.log ('AFTER the plugin executed');
+                                                }
+                                            });
+                });
+                
+                $('button:last').on ('click', function () {
+                    $('input').setReadOnly ('off');
+                });
+            });
+        </script>
+        
+        <style>
+            body, input, button {
+                font-family: Calibri;
+                font-size: 20px;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        <table>
+            <tr>
+                <td>
+                    <label>First Name:</label>
+                </td>
+                <td>
+                    <input type="text" size="35"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Last Name:</label>
+                </td>
+                <td>
+                    <input type="text" size="35"/>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <button>On</button>
+                </td>
+                <td>
+                    <button>Off</button>
+                </td>
+            </tr>
+        </table>
+    
+    
+    </body>
+</html>
