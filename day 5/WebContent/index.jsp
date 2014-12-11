@@ -37,8 +37,11 @@
 					});
 				}
 				else {
-					$.getJSON ('/OrderMgmt/orders/json', function (data) {
-						console.log (data.orders[0]);
+					$.getJSON ('/OrderMgmt/orders/json', function (response) {
+						$('#orders').empty();
+						$.each (response.orders, function (index, obj1) {
+							$('#orders').append ('<span class="success">' + obj1.name + " ordered " + obj1.item + '</span>');
+						});
 					});
 				}
 			});
